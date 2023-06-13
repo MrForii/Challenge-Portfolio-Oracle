@@ -47,10 +47,11 @@
     /* Items-2 */
     --item-2-height-lg: 286px;
     --item-2-height-md: 118px;
+    --item-2-height-sm: 118px;
 
     --item-2-width-lg: 368px;
     --item-2-width-md: 224px;
-    --item-2-width-sm: 296px;
+    --item-2-width-sm: 600px;
 
     --item-2-title-font-size-lg: 22px;
     --item-2-title-font-size-md: 20px;
@@ -68,7 +69,7 @@
 
     --item-3-h4-font-size-lg: 24px;
     --item-3-h4-font-size-md: 20px;
-    --item-3-h4-font-size-sm: 16px;
+    --item-3-h4-font-size-sm: 18px;
 
     --item-3-p-font-size-lg: 20px;
     --item-3-p-font-size-md: 16px;
@@ -81,7 +82,7 @@
 
 
 body {
-    width: 75vw;
+    width: min(100vw, 1440px);
     margin: 0 auto;
     background-color: #323232;
     display: flex;
@@ -212,6 +213,7 @@ section {
 
 /* --------------- Estilos AboutMe --------------- */
 .container {
+    
     background-color: var(--bg-color-2);
     width: 100vw;
     padding: 50px 0;
@@ -381,7 +383,6 @@ section {
 }
 
 .content-container .items-container .item-3 .btn .left-btn a {
-
     text-decoration: none;
     color: var(--item-logo-color);
 }
@@ -504,10 +505,10 @@ outline: none;
 
 /* Tablet */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
     body {
-        width: 90%;
+        width: min(100vw, 769px);
     }
     /* Header */
     .title-container {
@@ -530,6 +531,10 @@ outline: none;
 
     .title-container .title-text p {
         font-size: var(--title-p-font-size-md);
+    }
+
+    .title-container .title-text .title-items a {
+        font-size: var(--title-items-font-size-md);
     }
 
     /* About Me */
@@ -635,3 +640,158 @@ outline: none;
 }
 
 /* Mobile */
+
+@media (max-width: 768px) {
+    body {
+        width: min(90vw, 768px);
+    }
+
+    /* Header */
+
+    .title-container {
+        margin: 50px 0;
+    }
+
+    .head-container{
+        width: 95vw;
+    }
+
+    .head-container .items {
+        display: none;
+    }
+
+    /* Titulo */
+
+    .title-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .title-container .title-img {
+        width: 200px;
+        height: auto;
+        max-height: 500px;
+    }
+
+    .title-container .title-text h1 {
+        font-size: var(--title-font-size-md);
+        line-height: 28px;
+    }
+
+    .title-container .title-text p {
+        font-size: var(--title-p-font-size-sm);
+    }
+
+    .title-container .title-text .title-items a {
+        font-size: var(--title-items-font-size-sm);
+    }
+
+    /* About Me */
+
+    container {
+        padding: 25px 0;
+    }
+
+    .content-container {
+        width: 95%;
+    }
+
+    .content-container h1{
+        font-size: var(--h1-font-size-sm);
+    }
+
+    .content-container p {
+        font-size: var(--p-font-size-sm);
+    }
+
+    .content-container.about {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills */
+
+    .content-container .item {
+        flex-basis: calc(40% - 10px);
+        margin-bottom: 32px;
+
+        width: var(--item-width-sm);
+        height: var(--item-height-sm);
+    }
+
+    .content-container .item h3 {
+        font-size: var(--item-font-size);
+    }
+
+    /* Formacion */
+
+    .content-container .items-container.edu .logo-cont {
+        width: var(--item-2-width-sm);
+        height: var(--item-2-height-sm);
+        padding: 28px;
+    }
+
+    .content-container .items-container.edu {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-container .items-container.edu .item-2 h4 {
+        font-size: var(--item-2-h4-font-size-sm);
+    }
+
+    .content-container .items-container.edu .item-2 p {
+        font-size: var(--item-2-p-font-size-sm);
+    }
+
+    /* Proyectos */
+
+    .content-container .items-container .item-3 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    .content-container .items-container .item-3.reverse {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .content-container .items-container .item-3 .item-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-container .items-container .item-3 img {
+        max-width: var(--item-3-width-sm);
+    }
+
+    /* .content-container .items-container .item-description {
+        align-items: flex-start;
+        justify-content: flex-start;
+    } */
+
+    .content-container .items-container .item-3 h4 {
+        font-size: var(--item-3-h4-font-size-sm);
+        font-weight: 700;
+    }
+
+    .content-container .items-container .item-3 p {
+        font-size: var(--item-3-p-font-size-sm);
+    }
+
+    .content-container .items-container .item-3 .btn .left-btn a, .content-container .items-container .item-3 .btn .rigth-btn a {
+        font-size: 14px;
+    }
+
+    /* Contacto */
+
+    .content-container.contact {
+        grid-template-columns: 1fr;
+    }
+
+    .content-container.contact .contact-img {
+        display: none;
+    }
+}
