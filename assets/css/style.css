@@ -10,7 +10,7 @@
 
     /* Title */
     --title-font-size-lg: 52px;
-    --title-font-size-md: 22px;
+    --title-font-size-md: 32px;
 
     --title-p-font-size-lg: 24px;
     --title-p-font-size-md: 19px;
@@ -22,8 +22,8 @@
 
     /* Containers */
     --h1-font-size-lg: 36px;
-    --h1-font-size-md: 24px;
-    --h1-font-size-sm: 22px;
+    --h1-font-size-md: 28px;
+    --h1-font-size-sm: 24px;
 
     --p-font-size-lg: 20px;
     --p-font-size-md: 18px;
@@ -32,7 +32,7 @@
     /* Items */
     --item-bg-color: #3A4864;
     --item-logo-color: #9C8AC5;
-    --item-font-size: 20px;
+    --item-font-size: 18px;
 
     --item-logo-font-size: 32px;
 
@@ -53,23 +53,26 @@
     --item-2-width-sm: 296px;
 
     --item-2-title-font-size-lg: 22px;
-    --item-2-title-font-size-md: 18px;
-    --item-2-title-font-size-sm: 16px;
+    --item-2-title-font-size-md: 20px;
+    --item-2-title-font-size-sm: 18px;
 
     --item-2-p-font-size-lg: 20px;
-    --item-2-p-font-size-md: 18px;
+    --item-2-p-font-size-md: 16px;
     --item-2-p-font-size-sm: 16px;
 
     /* Items-3 */
 
     --item-3-width-lg: 760px;
-    --item-3-width-md: 700px;
-    --item-3-width-sm: 300px;
+    --item-3-width-md: 1024px;
+    --item-3-width-sm: 768px;
 
     --item-3-h4-font-size-lg: 24px;
     --item-3-h4-font-size-md: 20px;
     --item-3-h4-font-size-sm: 16px;
 
+    --item-3-p-font-size-lg: 20px;
+    --item-3-p-font-size-md: 16px;
+    --item-3-p-font-size-sm: 16px;
 }
 
 * {
@@ -111,6 +114,11 @@ section {
     gap: 32px;
 }
 
+.head-container .links {
+    display: flex;
+    gap: 20px;
+}
+
 .head-container .items a{
     text-decoration: none;
     color: var(--text-color-white);
@@ -119,7 +127,11 @@ section {
     line-height: 19px;
 }
 
-.head-container .items a.mail-item {
+.head-container .links a.mail-item {
+    text-decoration: none;
+    color: var(--text-color-white);
+    font-size: 16px;
+    line-height: 19px;
     font-weight: 700;
 }
 
@@ -292,7 +304,7 @@ section {
 /* --------------- Estilos Formacion --------------- */
 .content-container .items-container.edu{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .content-container .items-container.edu .logo-cont {
     width: var(--item-2-width-lg);
@@ -362,9 +374,14 @@ section {
     padding: 16px;
     border: 1px solid var(--item-logo-color);
     margin-right: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-container .items-container .item-3 .btn .left-btn a {
+
     text-decoration: none;
     color: var(--item-logo-color);
 }
@@ -481,3 +498,140 @@ outline: none;
     font-size: 16px;
     color: var(--text-color-white);
 }
+
+
+/* Media Queries */
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        width: 90%;
+    }
+    /* Header */
+    .title-container {
+        margin: 50px 0;
+    }
+    .head-container{
+        width: 90vw;
+    }
+
+    .head-container .items {
+        display: none;
+    }
+
+    /* Titulo */
+
+    .title-container .title-text h1 {
+        font-size: var(--title-font-size-md);
+        line-height: 36px;
+    }
+
+    .title-container .title-text p {
+        font-size: var(--title-p-font-size-md);
+    }
+
+    /* About Me */
+
+    .container {
+        padding: 25px 0;
+    }
+
+    .content-container {
+        width: 90%;
+    }
+
+    .content-container h1{
+        font-size: var(--h1-font-size-md);
+    }
+
+    .content-container p {
+        font-size: var(--p-font-size-md);
+    }
+
+    .content-container.about {
+        grid-template-columns: 1fr;
+    }
+
+    .content-container.about .img-firma img{
+        width: 160px;
+        height: 60px;
+    }
+
+    /* Skills */
+
+    .content-container .item {
+        flex-basis: calc(30% - 10px);
+        margin-bottom: 32px;
+
+        width: var(--item-width-md);
+        height: var(--item-height-md);
+    }
+
+    .content-container .item h3 {
+        font-size: var(--item-font-size);
+    }
+
+    /* Formacion */
+
+    .content-container .items-container.edu .logo-cont{
+        width: var(--item-2-width-md);
+        height: var(--item-2-height-md);
+        padding: 28px;
+    }
+
+    .content-container .items-container.edu .item-2 h4{
+        font-size: var(--item-2-h4-font-size-md);
+    }
+    .content-container .items-container.edu .item-2 p{
+        font-size: var(--item-2-p-font-size-md);
+    }
+
+    /* Proyectos */
+
+    .content-container .items-container .item-3 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    .content-container .items-container .item-3.reverse {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .content-container .items-container .item-3 .item-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-container .items-container .item-3 img {
+        max-width: var(--item-3-width-md);
+    }
+
+    .content-container .items-container .item-description {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .content-container .items-container .item-3 h4 {
+        font-size: var(--item-3-h4-font-size-md);
+    }
+
+    .content-container .items-container .item-3 p {
+        font-size: var(--item-3-p-font-size-md);
+    }
+
+    /* Contacto */
+    .content-container.contact {
+        grid-template-columns: 1fr;
+    }
+    .content-container.contact .contact-img {
+        display: none;
+    }
+}
+
+/* Mobile */
