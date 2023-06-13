@@ -738,8 +738,7 @@ outline: none;
     }
 
     .content-container .items-container.edu {
-        align-items: flex-start;
-        justify-content: center;
+        align-items: center;
         flex-direction: column;
     }
 
