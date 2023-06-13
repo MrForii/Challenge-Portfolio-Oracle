@@ -51,7 +51,7 @@
 
     --item-2-width-lg: 368px;
     --item-2-width-md: 224px;
-    --item-2-width-sm: 600px;
+    --item-2-width-sm: 400px;
 
     --item-2-title-font-size-lg: 22px;
     --item-2-title-font-size-md: 20px;
@@ -88,6 +88,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 section {
@@ -140,9 +141,11 @@ section {
 /* --------------- Estilos Titulo --------------- */
 
 .title-container {
+    width: 100vw;
     margin: 100px 0;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    align-content: center;
 }
 
 .title-container .title-text {
@@ -150,6 +153,8 @@ section {
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    width: 90vw;
+    padding: 0 20px;
 }
 
 .title-container .title-text h1 {
@@ -168,6 +173,7 @@ section {
 
 .title-container .title-text .title-items {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
 }
@@ -202,7 +208,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 0 20px;
 }
 
 .title-container .title-img img {
@@ -213,7 +219,6 @@ section {
 
 /* --------------- Estilos AboutMe --------------- */
 .container {
-    
     background-color: var(--bg-color-2);
     width: 100vw;
     padding: 50px 0;
@@ -643,7 +648,9 @@ outline: none;
 
 @media (max-width: 768px) {
     body {
-        width: min(90vw, 768px);
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     /* Header */
@@ -688,7 +695,7 @@ outline: none;
 
     /* About Me */
 
-    container {
+    .container {
         padding: 25px 0;
     }
 
@@ -725,14 +732,15 @@ outline: none;
     /* Formacion */
 
     .content-container .items-container.edu .logo-cont {
-        width: var(--item-2-width-sm);
+        width: 80vw;
         height: var(--item-2-height-sm);
         padding: 28px;
     }
 
     .content-container .items-container.edu {
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        flex-direction: column;
     }
 
     .content-container .items-container.edu .item-2 h4 {
@@ -766,11 +774,6 @@ outline: none;
     .content-container .items-container .item-3 img {
         max-width: var(--item-3-width-sm);
     }
-
-    /* .content-container .items-container .item-description {
-        align-items: flex-start;
-        justify-content: flex-start;
-    } */
 
     .content-container .items-container .item-3 h4 {
         font-size: var(--item-3-h4-font-size-sm);
