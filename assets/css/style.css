@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Colors */
+    --bg-color-1: #323232;
+    --bg-color-2: #473472;
+    --text-color-white: #ffffff;
+
+    /* Fuentes - Tamaños */
+
+    /* Title */
+    --title-font-size-lg: 52px;
+    --title-font-size-md: 22px;
+
+    --title-p-font-size-lg: 24px;
+    --title-p-font-size-md: 19px;
+    --title-o-font-size-sm: 16px;
+
+    --links-font-size-lg: 20px;
+    --links-font-size-md: 18px;
+    --links-font-size-sm: 16px;
+
+    /* Containers */
+    --h1-font-size-lg: 36px;
+    --h1-font-size-md: 24px;
+    --h1-font-size-sm: 22px;
+
+    --p-font-size-lg: 20px;
+    --p-font-size-md: 18px;
+    --p-font-size-sm: 16px;
+
+    /* Items */
+    --item-bg-color: #3A4864;
+    --item-logo-color: #9C8AC5;
+    --item-font-size: 20px;
+
+    --item-logo-font-size: 32px;
+
+    --item-height-lg: 176px;
+    --item-height-md: 118px;
+    --item-height-sm: 118px;
+
+    --item-width-lg: 176px;
+    --item-width-md: 224px;
+    --item-width-sm: 156px;
+
+    /* Items-2 */
+    --item-2-height-lg: 286px;
+    --item-2-height-md: 118px;
+
+    --item-2-width-lg: 368px;
+    --item-2-width-md: 224px;
+    --item-2-width-sm: 296px;
+
+    --item-2-title-font-size-lg: 22px;
+    --item-2-title-font-size-md: 18px;
+    --item-2-title-font-size-sm: 16px;
+
+    --item-2-p-font-size-lg: 20px;
+    --item-2-p-font-size-md: 18px;
+    --item-2-p-font-size-sm: 16px;
+
+    /* Items-3 */
+
+    --item-3-width-lg: 760px;
+    --item-3-width-md: 700px;
+    --item-3-width-sm: 300px;
+
+    --item-3-h4-font-size-lg: 24px;
+    --item-3-h4-font-size-md: 20px;
+    --item-3-h4-font-size-sm: 16px;
+
+}
+
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+
+body {
+    width: 75vw;
+    margin: 0 auto;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+/* --------------- Estilos Header --------------- */
+
+.head-container {
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.head-container .logo img{
+    width: 134px;
+    height: 24px;
+}
+
+.head-container .items {
+    display: flex;
+    gap: 32px;
+}
+
+.head-container .items a{
+    text-decoration: none;
+    color: var(--text-color-white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.head-container .items a.mail-item {
+    font-weight: 700;
+}
+
+
+/* --------------- Estilos Titulo --------------- */
+
+.title-container {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.title-container .title-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.title-container .title-text h1 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 60px;
+    color: var(--text-color-white);
+}
+
+.title-container .title-text p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--text-color-white);
+}
+
+.title-container .title-text .title-items {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.title-container .title-text .title-items li {
+    padding-right: 32px;
+}	
+
+.title-container .title-text .title-items a {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--text-color-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container .title-text .title-items a:hover {
+    text-shadow: 0 0 20px black;
+}
+
+.title-container .title-text .title-items li i{
+    color: var(--text-color-white);
+    font-size: 32px;
+    transform: rotate(-40deg);
+    font-weight: 300;
+}
+
+.title-container .title-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-container .title-img img {
+    width: 100%;
+    height: auto;
+    max-width: 736px;
+}
+
+/* --------------- Estilos AboutMe --------------- */
+.container {
+    background-color: var(--bg-color-2);
+    width: 100vw;
+    padding: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container{
+    width: 75%;
+}
+
+.content-container.about {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.content-container h1{
+    font-size: var(--h1-font-size-lg);
+    color: var(--text-color-white);
+}
+
+.content-container.about .title-about {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-container p {
+    font-size: var(--p-font-size-lg);
+    color: var(--text-color-white);
+    font-weight: 300;
+    padding-bottom: 16px;
+}
+
+/* --------------- Estilos Skills --------------- */
+
+.container.dark {
+    background-color: var(--bg-color-1);
+}
+
+.content-container{
+    padding-bottom: 60px;
+}
+
+.content-container .title h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container .items-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.content-container .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    width: var(--item-width-lg);
+    height: var(--item-height-lg);
+    background: var(--item-bg-color);
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.content-container .item i {
+    font-size: var(--item-logo-font-size);
+    color: var(--item-logo-color);
+}
+
+.content-container .item h3 {
+    color: var(--text-color-white);
+    font-size: var(--item-font-size);
+    font-weight: 700;
+}
+
+.content-container .item:hover {
+    box-shadow: 5px 5px 4px #473472;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+/* --------------- Estilos Formacion --------------- */
+
+.content-container .items-container .logo-cont {
+    width: var(--item-2-width-lg);
+    height: var(--item-2-height-lg);
+    background: var(--item-bg-color);
+    border-radius: 20px;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container .items-container .item-2 h4{
+    color: var(--text-color-white);
+    font-size: var(--item-2-title-font-size-lg);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.content-container .items-container .item-2 p {
+    font-size: var(--item-2-p-font-size-lg);
+    font-weight: 500;
+}
+
+/* --------------- Estilos Proyectos --------------- */
+
+
+.content-container .items-container .item-3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.content-container .items-container .item-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-container .items-container .item-3 img{
+    width: 100%;
+    max-width: var(--item-3-width-lg);
+    height: auto;
+}
+
+.content-container .items-container .item-3 h4{
+    color: var(--text-color-white);
+    font-size: var(--item-3-h4-font-size-lg);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.content-container .items-container .item-3 p{
+    font-size: var(--item-3-p-font-size-lg);
+}
+
+.content-container .items-container .item-3 .btn{
+    display: flex;
+}
+
+.content-container .items-container .item-3 .btn .left-btn {
+    padding: 16px;
+    border: 1px solid var(--item-logo-color);
+    margin-right: 16px;
+}
+
+.content-container .items-container .item-3 .btn .left-btn a {
+    text-decoration: none;
+    color: var(--item-logo-color);
+}
+
+.content-container .items-container .item-3 .btn .rigth-btn {
+    padding: 16px;
+    background-color: var(--item-logo-color);
+}
+
+.content-container .items-container .item-3 .btn .rigth-btn a {
+    text-decoration: none;
+    color: var(--bg-color-1);
+}
+
+/* --------------- Estilos Contacto --------------- */
+
+.content-container.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Estilos Imagen */
+
+.contact-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-img img {
+    width: 90%;
+    height: auto;
+}
+
+/* Estilos Inputs */
+
+.input-container {
+    position: relative;
+    padding: 15px 15px 10px 15px;
+    background-color: var(--item-bg-color);
+    border-radius: 10px;
+    border-bottom: 2px solid var(--text-color-white);
+    margin-bottom: 16px;
+}
+
+.input-container.textarea {
+    height: 150px;
+}
+
+.input-wrapper {
+position: relative;
+
+}
+
+.input-label {
+position: absolute;
+top: 10px;
+left: 10px;
+color: #A2A2A2;
+pointer-events: none;
+transition: 0.2s;
+}
+
+.input-container:focus-within {
+    border-bottom: 2px solid var(--item-logo-color);
+}
+
+.input-wrapper:focus-within .input-label,
+.input-field:valid + .input-label {
+top: -10px;
+font-size: 12px;
+color: var(--item-logo-color);
+padding: 0;
+}
+
+.input-field {
+width: 95%;
+padding: 10px;
+background-color: var(--item-bg-color);
+font-size: 16px;
+color: var(--text-color-white);
+border: none;
+outline: none;
+}
+
+/* Estilos Boton Enviar */
+
+.btn-form{
+    padding: 15px;
+    width: 144px;
+    height: 51px;
+
+    background-color: var(--item-logo-color);
+    color: var(--bg-color-1);
+    border: none;
+
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+
+/* --------------- Estilos Footer --------------- */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+    font-size: 16px;
+    color: var(--text-color-white);
+}
