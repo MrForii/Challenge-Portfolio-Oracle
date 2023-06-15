@@ -80,6 +80,10 @@
     font-family: "Raleway", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     width: min(100vw, 1440px);
