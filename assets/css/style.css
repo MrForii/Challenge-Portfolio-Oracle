@@ -458,7 +458,7 @@ transition: 0.2s;
 }
 
 .input-wrapper:focus-within .input-label,
-.input-field:valid + .input-label {
+.input-field:valid + .input-label + .error {
 top: -10px;
 font-size: 12px;
 color: var(--item-logo-color);
