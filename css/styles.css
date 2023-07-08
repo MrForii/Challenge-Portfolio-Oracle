@@ -460,7 +460,7 @@ section {
 .contact-form form{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 .input-container {
@@ -490,7 +490,7 @@ section {
 
 .input-highlight {
     position: absolute;
-    bottom: 0;
+    bottom: 10;
     left: 0;
     height: 2px;
     width: 0;
@@ -507,6 +507,10 @@ section {
 .input-field:focus + .input-label + .input-highlight {
     width: 100%;
 }
+
+/* p.error {
+    color: red;
+} */
 
 .btn-contact {
     padding: 1rem 2rem;
