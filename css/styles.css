@@ -54,10 +54,6 @@ header {
     position: relative;
 }
 
-header.sticky {
-    background-color: var(--platinum);
-}
-
 .nav-bar {
     position: fixed;
     width: 85%;
@@ -129,8 +125,6 @@ section {
     flex-direction: column;
     gap: 1.2rem;
 }
-
-
 
 .btn-hero {
     display: flex;
@@ -469,12 +463,10 @@ section {
     gap: 3rem;
 }
 
-/* Input container */
 .input-container {
     position: relative;
 }
 
-/* Input field */
 .input-field {
     display: block;
     width: 100%;
@@ -486,7 +478,6 @@ section {
     background-color: transparent;
 }
 
-/* Input label */
 .input-label {
     position: absolute;
     top: 0;
@@ -497,7 +488,6 @@ section {
     transition: all 0.3s ease;
 }
 
-/* Input highlight */
 .input-highlight {
     position: absolute;
     bottom: 0;
@@ -508,7 +498,6 @@ section {
     transition: all 0.3s ease;
 }
 
-/* Input field:focus styles */
 .input-field:focus + .input-label {
     top: -20px;
     font-size: 12px;
@@ -518,7 +507,6 @@ section {
 .input-field:focus + .input-label + .input-highlight {
     width: 100%;
 }
-
 
 .btn-contact {
     padding: 1rem 2rem;
@@ -568,4 +556,249 @@ section {
     background-color: var(--wenge);
     color: white;
     transition: .5s ease-in-out;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    /* Header */
+
+    .nav-bar {
+        width: 90%;
+    }
+
+    .nav-bar.sticky {
+        padding: 0 5%;
+    }
+
+    /* Hero */
+
+    .container {
+        width: 90vw;
+    }
+
+    .content {
+        grid-template-columns: 60% 40%;
+        gap: 2rem;
+    }
+
+    .btn {
+        padding: .5rem 1.5rem;
+        gap: .5rem;
+    }
+
+    /* About me */
+
+    .content.about {
+        grid-template-columns: 60% 30%;
+    }
+
+    /* Skills */
+
+    .skills-container {
+        width: 100%;
+    }
+
+    .skills-container li i {
+        font-size: 4rem;
+    }
+
+    /* Education */
+
+    .education-container {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .card-img img{
+        width: 150px;
+        height: auto;
+    }
+
+    /* Projects */
+
+    .card-img-2 {
+        width: 40%;
+    }
+
+    .projects-details {
+        width: 60%;
+    }
+
+    .proj-btn {
+        gap: 1rem;
+    }
+
+    .btn-1, .btn-2 {
+        padding: .5rem 1.5rem;
+    }
+
+    /* Contact */
+
+    .content.contact {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .content.contact .title-img {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Header */
+
+    .nav-bar {
+        width: 95%;
+    }
+
+    .nav-bar.sticky {
+        padding: 0 2.5%;
+        height: 50px;
+    }
+
+    .nav-bar .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Hero */
+
+    .container {
+        width: 95vw;
+        padding: 1.5rem 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .title {
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .title-img {
+        width: 70%;
+    }
+
+    .btn-hero {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .btn {
+        width: calc(100 / 3);
+        padding: .5rem 2rem;
+    }
+
+    /* About me */
+
+    .content.about .about-img{
+        display: none;
+    }
+
+    /* Skills */
+
+    .skills-container{
+        width: 100%;
+    }
+
+    .skills-container li {
+        width: calc(90% / 3);
+    }
+
+    .skills-container li i {
+        font-size: 3rem;
+    }
+
+    /* Education */
+
+    .card {
+        height: 250px;
+    }
+
+    .details {
+        gap: .5rem;
+    }
+
+    .card-img img {
+        width: 120px;
+    }
+
+    /* Projects */
+
+    .card-2 {
+        flex-direction: column;
+    }
+
+    .card-img-2 {
+        width: 100%;
+    }
+
+    .projects-details {
+        width: 100%;
+    }
+
+    .proj-btn {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    /* Contact */
+
+    .content.contact {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .content.contact .title-img {
+        display: none;
+    }
+
+    /* Footer */
+
+    .container.footer {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        text-align: center;
+    }
 }
